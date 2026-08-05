@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & FAQs - Marque Oil & Gas</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+		
+        <!-- Header Section -->
+		<header class="site-header">
+			<div class="header-logo">
+				<a href="index.html" title="Return to Homepage">
+					<img src="media/logo.png" alt="Website Logo">
+				</a>
+			</div>
+			<div class="header-text-container">
+				<h1 class="header-title">MARQUE OIL & GAS LTD</h1>
+			</div>
+		</header>
+
+        <!-- Navigation Section -->
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="button nav-btn">Home</a></li>
+                <li><a href="caseForGas.html" class="button nav-btn">The Case for Gas</a></li>
+                <li><a href="netZero.html" class="button nav-btn">Net Zero</a></li>
+            </ul>
+        </nav>
+
+		<!-- Subpage Body / Content Section -->
+		<main class="page-body-content">
+            
+            <!-- Page Heading Box -->
+            <section class="content-section page-heading-box reveal">
+                <h2>Voter Questions & FAQs</h2>
+                <p class="page-subtitle-white">Local Gas. Lower Emissions. Long-Term Public Value.</p>
+                <p class="lead-text">Have questions about our local gas development plans, environmental impact, or community benefits? Browse our commonly asked questions below. <br><br> <b>Don't see the answer to your question? Please reach out to us at <a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a></b></p>
+            </section>
+
+            <!-- Accordion FAQ Section -->
+            <section class="content-section text-content-box reveal">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-question">Question 1?</summary>
+                        <div class="faq-answer"><p>Answer 1 goes here.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Question 2?</summary>
+                        <div class="faq-answer"><p>Answer 2 goes here.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Question 3?</summary>
+                        <div class="faq-answer"><p>Answer 3 goes here.</p></div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Professional Resource Library Section -->
+            <section class="content-section text-content-box reveal">
+                <h3>Project Documentation & Resources</h3>
+                <p class="section-subtitle">Access official reports, regulatory filings, and public consultation materials below.</p>
+
+                <div class="resource-grid">
+                    <a href="docs/bennachie.jpg" target="_blank" class="resource-card">
+                        <div class="resource-icon">PDF</div>
+                        <div class="resource-info">
+                            <h4>Resource 1 - Bennachie</h4>
+                            <p>Description of what this resource is - A picture of Bennachie</p>
+                        </div>
+                        <div class="resource-action">View <span>↗</span></div>
+                    </a>
+                    <a href="docs/cruden-bay.jpg" target="_blank" class="resource-card">
+                        <div class="resource-icon">PDF</div>
+                        <div class="resource-info">
+                            <h4>Resource 2 - Cruden Bay</h4>
+                            <p>Description of resource - a picture of Cruden Bay</p>
+                        </div>
+                        <div class="resource-action">View <span>↗</span></div>
+                    </a>
+					
+					<a href="docs/v1.0.zip" target="_blank" class="resource-card">
+                        <div class="resource-icon">WEBSITE VERSION</div>
+                        <div class="resource-info">
+                            <h4>Resource 3 - Zipped version of first website</h4>
+                            <p>Zipped backup of first version of website</p>
+                        </div>
+                        <div class="resource-action">View <span>↗</span></div>
+                    </a>
+                </div>
+            </section>
+		</main>
+
+		<!-- Unified Footer / Contact Section -->
+		<footer class="site-footer reveal">
+			<div class="footer-top">
+				<div class="footer-logo">
+					<img src="media/logo.png" alt="Website Logo">
+				</div>
+				<div class="footer-contact-block">
+					<h3 class="footer-contact-heading">Contact</h3>
+					<a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>Registered Office: 167 Great Portland Street, 5th Floor, London W1W 5PF</p>
+				<p>Marque Oil & Gas Ltd – All Rights Reserved. Created 2026 by MParr</p>
+			</div>
+		</footer>
+
+    </div>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.1 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => { entry.target.classList.add('active'); }, index * 100); 
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.reveal').forEach(section => { observer.observe(section); });
+        });
+    </script>
+	
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" title="Scroll to top">
+		<span>Top</span> 
+		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
+	</button>
+
+	<script>
+		const backToTopBtn = document.getElementById("backToTopBtn");
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) { backToTopBtn.classList.add("show"); } else { backToTopBtn.classList.remove("show"); }
+		});
+		backToTopBtn.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
+	</script>
+
+	<!-- Fullscreen Image Modal Container -->
+	<div id="imageModal" onclick="this.classList.remove('active')">
+		<img id="modalImg" src="" alt="Enlarged view">
+	</div>
+
+	<script>
+		document.querySelectorAll('.side-image img, .content-image-wrapper img').forEach(img => {
+			img.addEventListener('click', () => {
+				const modal = document.getElementById('imageModal');
+				const modalImg = document.getElementById('modalImg');
+				modalImg.src = img.src;
+				modal.classList.add('active');
+			});
+		});
+	</script>
+</body>
+</html>

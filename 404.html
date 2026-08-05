@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Marque Oil & Gas</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+		
+        <!-- Header Section -->
+		<header class="site-header">
+			<div class="header-logo">
+				<a href="index.html" title="Return to Homepage">
+					<img src="media/logo.png" alt="Website Logo">
+				</a>
+			</div>
+			<div class="header-text-container">
+				<h1 class="header-title">MARQUE OIL & GAS LTD</h1>
+			</div>
+		</header>
+
+        <!-- Navigation Section -->
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="button nav-btn">Home</a></li>
+                <li><a href="caseForGas.html" class="button nav-btn">The Case for Gas</a></li>
+                <li><a href="netZero.html" class="button nav-btn">Net Zero</a></li>
+                <li><a href="resources.html" class="button nav-btn">Resources & FAQs</a></li>
+            </ul>
+        </nav>
+
+		<!-- 404 Error Content Box -->
+		<main class="page-body-content">
+            <section class="content-section text-content-box" style="text-align: center; padding: 60px 40px;">
+                <h3 style="font-size: clamp(3rem, 6vw, 5rem); color: var(--color-primary); margin-bottom: 10px;">404</h3>
+                <h2 style="margin-bottom: 20px;">Oops! Page Could Not Be Found</h2>
+                <p class="lead-text" style="max-width: 600px; margin: 0 auto 30px auto;">
+                    The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+                </p>
+                <a href="index.html" class="button" style="display: inline-block;">Return to Homepage</a>
+            </section>
+		</main>
+
+		<!-- Unified Footer / Contact Section -->
+		<footer class="site-footer">
+			<div class="footer-top">
+				<div class="footer-logo">
+					<img src="media/logo.png" alt="Website Logo">
+				</div>
+				<div class="footer-contact-block">
+					<h3 class="footer-contact-heading">Contact</h3>
+					<a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>Registered Office: 167 Great Portland Street, 5th Floor, London W1W 5PF</p>
+				<p>Created 2026 by MParr</p>
+			</div>
+		</footer>
+
+    </div>
+	
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" title="Scroll to top">
+		<span>Top</span> 
+		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
+	</button>
+
+	<script>
+		const backToTopBtn = document.getElementById("backToTopBtn");
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) { backToTopBtn.classList.add("show"); } else { backToTopBtn.classList.remove("show"); }
+		});
+		backToTopBtn.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
+	</script>
+</body>
+</html>

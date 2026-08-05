@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Zero - Marque Oil & Gas</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+		
+        <!-- Header Section -->
+		<header class="site-header">
+			<div class="header-logo">
+				<a href="index.html" title="Return to Homepage">
+					<img src="media/logo.png" alt="Website Logo">
+				</a>
+			</div>
+			<div class="header-text-container">
+				<h1 class="header-title">MARQUE OIL & GAS LTD</h1>
+			</div>
+		</header>
+
+        <!-- Navigation Section -->
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="button nav-btn">Home</a></li>
+                <li><a href="caseForGas.html" class="button nav-btn">The Case for Gas</a></li>
+                <li><a href="resources.html" class="button nav-btn">Resources & FAQs</a></li>
+            </ul>
+        </nav>
+
+        <!-- Tab Navigation Switcher Bar -->
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'section1')">Tab1</button>
+            <button class="tab-btn" onclick="openTab(event, 'section2')">Tab2</button>
+            <button class="tab-btn" onclick="openTab(event, 'section3')">Tab3</button>
+        </div>
+
+		<!-- Subpage Body / Content Section -->
+		<main class="page-body-content">
+            
+            <!-- Tab 1: Overview -->
+            <div id="section1" class="tab-content active">
+                <section class="content-section page-heading-box">
+                    <h2>Tab 1</h2>
+                    <p class="page-subtitle-white">Local Gas. Lower Emissions. Long-Term Public Value.</p>
+                    <p class="lead-text">Add your lead introductory text or summary here...</p>
+                    
+                    <div class="content-side-by-side">
+                        <div class="side-text">
+                            <p>Add descriptive paragraphs or bullet points here...</p>
+                        </div>
+                        <div class="side-image">
+                            <img src="media/placeholder.png" alt="Description of image">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab 2: Emissions Strategy -->
+            <div id="section2" class="tab-content">
+                <section class="content-section text-content-box">
+                    <h3>Tab 2</h3>
+                    <p class="section-subtitle"><em>Add an optional subtitle or category context here...</em></p>
+                    <p>Add your main text content, lists, or tables here...</p>
+                </section>
+            </div>
+
+            <!-- Tab 3: Transition Roadmap -->
+            <div id="section3" class="tab-content">
+                <section class="content-section text-content-box">
+                    <h3>Tab 3</h3>
+                    <div class="content-image-wrapper">
+                        <img src="media/placeholder.png" alt="Roadmap graphic placeholder">
+                    </div>
+                </section>
+            </div>
+
+		</main>
+
+		<!-- Unified Footer / Contact Section -->
+		<footer class="site-footer">
+			<div class="footer-top">
+				<div class="footer-logo">
+					<img src="media/logo.png" alt="Website Logo">
+				</div>
+				<div class="footer-contact-block">
+					<h3 class="footer-contact-heading">Contact</h3>
+					<a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>Registered Office: 167 Great Portland Street, 5th Floor, London W1W 5PF</p>
+				<p>Created 2026 by MParr</p>
+			</div>
+		</footer>
+
+    </div>
+
+    <!-- Tab Switcher Script -->
+    <script>
+        function openTab(evt, tabName) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            const buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+	
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" title="Scroll to top">
+		<span>Top</span> 
+		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
+	</button>
+
+	<script>
+		const backToTopBtn = document.getElementById("backToTopBtn");
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				backToTopBtn.classList.add("show");
+			} else {
+				backToTopBtn.classList.remove("show");
+			}
+		});
+		backToTopBtn.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	</script>
+
+	<!-- Fullscreen Image Modal Container -->
+	<div id="imageModal" onclick="this.classList.remove('active')">
+		<img id="modalImg" src="" alt="Enlarged view">
+	</div>
+
+	<script>
+		document.querySelectorAll('.side-image img, .content-image-wrapper img').forEach(img => {
+			img.addEventListener('click', () => {
+				const modal = document.getElementById('imageModal');
+				const modalImg = document.getElementById('modalImg');
+				modalImg.src = img.src;
+				modal.classList.add('active');
+			});
+		});
+	</script>
+</body>
+</html>

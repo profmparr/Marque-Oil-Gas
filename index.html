@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Marque Oil & Gas</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- Header Section with Clickable Logo on Left -->
+		<header class="site-header">
+			<div class="header-logo">
+				<a href="index.html" title="Return to Homepage">
+					<img src="media/logo.png" alt="Website Logo">
+				</a>
+			</div>
+			<div class="header-text-container">
+				<h1 class="header-title">MARQUE OIL & GAS LTD</h1>
+			</div>
+		</header>
+
+        <!-- Navigation Section -->
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="caseForGas.html" class="button nav-btn">The Case for Gas</a></li>
+                <li><a href="netZero.html" class="button nav-btn">Net Zero</a></li>
+                <li><a href="resources.html" class="button nav-btn">Resources & FAQs</a></li>
+            </ul>
+        </nav>
+
+		<!-- Hero / Vision Statement Section -->
+		<section class="site-hero reveal">
+			<img src="media/sea.jpg" alt="Coastal landscape with offshore energy infrastructure" class="hero-image">
+			
+			<div class="hero-vision-box">
+				<h3>The Company</h3>
+				<p>We are an independent energy company focused on identifying and responsibly developing overlooked oil and gas opportunities in mature basins. <br>
+				We combine technical expertise, commercial discipline and practical infrastructure solutions to progress resources that might otherwise remain undeveloped.</p>
+			</div>
+			
+			<div class="hero-vision-box">
+				<h3>Our Purpose</h3>
+				<p>Our purpose is to maximise the economic value of local gas through efficient development, rigorous environmental stewardship and responsible resource management.<br> Our current project has the potential to create substantial and lasting value for government, the economy and the wider community during the transition to a lower-carbon energy system.</p>
+			</div>
+		</section>
+
+		<!-- Key Statistics / Impact Metrics Grid -->
+		<section class="content-section metrics-grid reveal">
+			<div class="metric-card">
+				<div class="metric-number">£Billions</div>
+				<p class="metric-label">In potential tax revenue delivered directly to the Isle of Man Exchequer.</p>
+			</div>
+			
+			<div class="metric-card">
+				<div class="metric-number">10%</div>
+				<p class="metric-label">Of local gas piped back to meet domestic supply needs securely.</p>
+			</div>
+			
+			<div class="metric-card">
+				<div class="metric-number">10 Miles</div>
+				<p class="metric-label">Offshore location for a compact, 30m tall unmanned installation.</p>
+			</div>
+		</section>
+
+		<!-- Leadership Team Section -->
+		<section class="content-section team-section reveal">
+			
+			<!-- Top Row: Names and Titles -->
+			<div class="team-roster">
+				<div class="team-member">
+					<h3>Mark Ibram <br><span class="member-title">(Director)</span></h3>
+				</div>
+				<div class="team-member">
+					<h3>Dr Ronnie Parr <br><span class="member-title">(Subsurface Manager)</span></h3>
+				</div>
+				<div class="team-member">
+					<h3>James Keggin <br><span class="member-title">(Country Manager)</span></h3>
+				</div>
+			</div>
+			
+			<!-- Visual Divider -->
+			<hr class="team-divider">
+			
+			<!-- Bottom Row: Bullet Points -->
+			<div class="team-experience">
+				<ul>
+					<li>With a combined total of over 120 years experience in the oil and gas industry as Geophysicists.</li>
+					<li>Global and UK experience:
+						<ul>
+							<li>for consultancies, leading contractors and multi-national oil companies.</li>
+							<li>Over 80 combined years with BP</li>
+							<li>for the UK Oil & Gas regulator (NSTA, formerly the OGA)</li>
+						</ul>
+					</li>
+					<li>Team Leaders and Technical Experts, with major discoveries (e.g. Schiehallion WoS)</li>
+					<li>Based in Aberdeen and the Isle of Man.</li>
+				</ul>
+			</div>
+			
+		</section>
+
+		<!-- Unified Footer / Contact Section -->
+		<footer class="site-footer reveal">
+			<div class="footer-top">
+				<div class="footer-logo">
+					<img src="media/logo.png" alt="Website Logo">
+				</div>
+				<div class="footer-contact-block">
+					<h3 class="footer-contact-heading">Contact</h3>
+					<a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<p>Registered Office: 167 Great Portland Street, 5th Floor, London W1W 5PF</p>
+				<p>Created 2026 by MParr</p>
+			</div>
+		</footer>
+
+    </div>
+
+    <!-- Global Staggered Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, index * 100); 
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+	
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" title="Scroll to top">
+		<span>Top</span> 
+		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
+	</button>
+
+	<script>
+		const backToTopBtn = document.getElementById("backToTopBtn");
+
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				backToTopBtn.classList.add("show");
+			} else {
+				backToTopBtn.classList.remove("show");
+			}
+		});
+
+		backToTopBtn.addEventListener("click", () => {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	</script>
+</body>
+</html>

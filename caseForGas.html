@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case For Gas - Marque Oil & Gas</title>
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+		
+        <!-- Header Section -->
+		<header class="site-header">
+			<div class="header-logo">
+				<a href="index.html" title="Return to Homepage">
+					<img src="media/logo.png" alt="Website Logo">
+				</a>
+			</div>
+			<div class="header-text-container">
+				<h1 class="header-title">MARQUE OIL & GAS LTD</h1>
+			</div>
+		</header>
+
+        <!-- Navigation Section -->
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="button nav-btn">Home</a></li>
+                <li><a href="netZero.html" class="button nav-btn">Net Zero</a></li>
+                <li><a href="resources.html" class="button nav-btn">Resources & FAQs</a></li>
+            </ul>
+        </nav>
+
+        <!-- Tab Navigation Switcher Bar -->
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'opportunity')">The Opportunity</button>
+            <button class="tab-btn" onclick="openTab(event, 'case')">The Case</button>
+            <button class="tab-btn" onclick="openTab(event, 'vision')">Development Vision</button>
+            <button class="tab-btn" onclick="openTab(event, 'economics')">Economics</button>
+        </div>
+
+		<!-- Subpage Body / Content Section -->
+		<main class="page-body-content">
+            
+		<!-- Tab 1: Summary and Location (Side-by-Side) -->
+		<div id="opportunity" class="tab-content active">
+			<section class="content-section page-heading-box">
+				<h3>The Isle of Man Gas Opportunity</h3>
+				<p class="page-subtitle-white">Local Gas. Lower Emissions. Long-Term Public Value.</p>
+				
+				<!-- Two-Column Wrapper -->
+				<div class="content-side-by-side">
+					<div class="side-text">
+						<p class="lead-text">Situated within the Isle of Man’s territorial waters lies a potentially significant gas discovery. The gas development could deliver billions of pounds in tax revenue to the Isle of Man.</p>
+						<p class="lead-text">The gas field sits directly beneath the proposed Mooir Vannin wind farm, however, the gas field cannot be developed if the wind farm is in place. It may be possible to develop the wind farm once the gas field has been developed. There is thus economic competition for the same sea-bed area, with the choice of:</p>
+						<ol> 
+							<li>Gas only.</li> 
+							<li>Wind only.</li> 
+							<li>Gas + wind – but NOT wind + gas.</li> 
+						</ol>
+					</div>
+					<div class="side-image">
+						<img src="media/basicMap.png" alt="Map illustrating the spatial overlap between the proposed wind farm and the gas field">
+					</div>
+				</div>
+			</section>
+		</div>
+
+            <!-- Tab 2: The Case for Manx Gas Box -->
+            <div id="case" class="tab-content">
+                <section class="content-section text-content-box">
+                    <h3>The Case For Manx Gas</h3>
+                    <ul>
+                        <li><b>Energy Security</b> – Local gas could provide energy security to shield the Island from global supply shortages.</li>
+                        <li><b>Price Security</b> – Could provide capped gas prices to IoM customers to prevent energy price spikes feeding through to household bills.</li>
+                        <li><b>Tax Revenue</b> – Will provide billions of pounds of tax revenue to the island.</li>
+                        <li><b>Net Zero Compliance</b> – Will reduce CO2 emissions as local gas has lower emissions than imported gas, and could form part of a UK Carbon Capture and Storage system to provide emissions-free electricity to the Island.</li>
+                        <li><b>Tiny Visual Environmental Impact</b> – Sea-bed well-heads connecting to a 30m tall unmanned installation approximately 10 miles off the coast.</li>
+                        <li><b>No CO2 Emissions at Source</b> – Compressor power supplied from shore.</li>
+                    </ul>
+                    <div class="content-image-wrapper">
+                        <img src="media/rigAtSea.png" alt="Illustration of an offshore production installation at sea">
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab 3: Development Vision Box (5-Step Timeline + Map layout) -->
+            <div id="vision" class="tab-content">
+                <section class="content-section text-content-box">
+                    <h3>The Development Vision</h3>
+                    <p class="section-subtitle"><em>Step-by-step progression of the local gas development and carbon capture integration.</em></p>
+                    
+                    <div class="content-side-by-side">
+                        <div class="side-text">
+                            <div class="timeline-container">
+                                <div class="timeline-step">
+                                    <div class="timeline-marker">1</div>
+                                    <div class="timeline-content">
+                                        <h4>Barrow Processing</h4>
+                                        <p>Gas piped to Barrow for processing at existing facility (dashed red line and red triangle).</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-marker">2</div>
+                                    <div class="timeline-content">
+                                        <h4>Domestic Supply</h4>
+                                        <p>10% of gas piped back to the IoM for domestic supplies through existing pipeline network and Irish interconnector spur (solid red line).</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-marker">3</div>
+                                    <div class="timeline-content">
+                                        <h4>Connah’s Quay Generation</h4>
+                                        <p>90% of gas piped to Connah’s Quay for electricity generation and CO2 emissions capture as part of the CCS scheme.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-marker">4</div>
+                                    <div class="timeline-content">
+                                        <h4>Carbon Storage</h4>
+                                        <p>Captured CO2 emissions compressed and piped (purple line) to the Hamilton & Lennox Carbon Store for underground storage in depleted gas production reservoir.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-marker">5</div>
+                                    <div class="timeline-content">
+                                        <h4>Clean Interconnector</h4>
+                                        <p>Emissions-free electricity supplies the Isle of Man through a new interconnector (black dashed line).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="side-image">
+                            <img src="media/bigMap.png" alt="Detailed map showing the proposed pipeline network to Barrow and Connahs Quay">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab 4: Economic Comparison in Brief -->
+            <div id="economics" class="tab-content">
+                <section class="content-section text-content-box">
+                    <h3>The Economic Comparison in Brief</h3>
+                    <p class="section-subtitle"><em>Key economic tests for Isle of Man residents, Government finances and local impacts</em></p>
+
+                    <div class="table-container">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Economic test</th>
+                                    <th class="header-wind">Wind Power and Mooir Vannin</th>
+                                    <th class="header-gas">Gas Development</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="test-name">Price protection</td>
+                                    <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-no">NO</span> — no protection from gas/electricity price spikes.</td>
+                                    <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — lower prices and capped surges for residents.</td>
+                                </tr>
+                                <tr>
+                                    <td class="test-name">Project support</td>
+                                    <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-no">NO</span> — no UK CfDs/curtailment payments; may need guarantees.</td>
+                                    <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — no Government price guarantees required.</td>
+                                </tr>
+                                <tr>
+                                    <td class="test-name">Exchequer benefit</td>
+                                    <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-unlikely">UNLIKELY</span> — the stated £2bn benefit is not secure.</td>
+                                    <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — benefits expected to exceed wind farm upside.</td>
+                                </tr>
+                                <tr>
+                                    <td class="test-name">Resident bills</td>
+                                    <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-risk">RISK</span> — potential move from 29p/kWh to ~45p/kWh (+50%).</td>
+                                    <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — keeps electricity prices low, free of renewable tariffs.</td>
+                                </tr>
+                                <tr>
+                                    <td class="test-name">Wider Local economy</td>
+                                    <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-bad">BAD</span> — visual impact concern; may negatively impact tourism and fishing.</td>
+                                    <td class="col-gas" data-label="Gas Development"><span class="status-neutral">NEUTRAL</span> — installations not expected to damage tourism or significantly affect fishing.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <div class="simple-choice-box">
+                        <h3>The Bottom Line: A Simple Choice</h3>
+                        <ul class="choice-list">
+                            <li><strong>Option A:</strong> A wind farm that raises bills and brings little benefit, <em>or</em></li>
+                            <li><strong>Option B:</strong> A gas development that brings in higher tax revenues and keeps prices low.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+		</main>
+
+		<!-- Unified Footer / Contact Section -->
+		<footer class="site-footer">
+			<div class="footer-top">
+				<div class="footer-logo">
+					<img src="media/logo.png" alt="Website Logo">
+				</div>
+				<div class="footer-contact-block">
+					<h3 class="footer-contact-heading">Contact</h3>
+					<a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<p>Registered Office: 167 Great Portland Street, 5th Floor, London W1W 5PF</p>
+				<p>Created 2026 by MParr</p>
+			</div>
+		</footer>
+
+    </div>
+
+    <!-- Tab Switcher Script -->
+    <script>
+        function openTab(evt, tabName) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            const buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+	
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" title="Scroll to top">
+		<span>Top</span> 
+		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
+	</button>
+
+	<script>
+		const backToTopBtn = document.getElementById("backToTopBtn");
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				backToTopBtn.classList.add("show");
+			} else {
+				backToTopBtn.classList.remove("show");
+			}
+		});
+		backToTopBtn.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	</script>
+
+	<!-- Fullscreen Image Modal Container -->
+	<div id="imageModal" onclick="this.classList.remove('active')">
+		<img id="modalImg" src="" alt="Enlarged view">
+	</div>
+
+	<script>
+		document.querySelectorAll('.side-image img, .content-image-wrapper img').forEach(img => {
+			img.addEventListener('click', () => {
+				const modal = document.getElementById('imageModal');
+				const modalImg = document.getElementById('modalImg');
+				modalImg.src = img.src;
+				modal.classList.add('active');
+			});
+		});
+	</script>
+</body>
+</html>
