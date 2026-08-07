@@ -35,9 +35,7 @@
         <!-- Navigation Section -->
         <nav class="primary-nav" aria-label="Main Navigation">
             <ul class="nav-list">
-                <li><a href="index.html" class="button nav-btn">Home</a></li>
-                <li><a href="netZero.html" class="button nav-btn">Net Zero</a></li>
-                <li><a href="resources.html" class="button nav-btn">Resources & FAQs</a></li>
+                <li><a href="index.html" class="button nav-btn">Return to Home</a></li>
             </ul>
         </nav>
 
@@ -45,8 +43,10 @@
         <div class="tab-nav">
             <button class="tab-btn active" onclick="openTab(event, 'opportunity')">The Opportunity</button>
             <button class="tab-btn" onclick="openTab(event, 'case')">The Case</button>
-            <button class="tab-btn" onclick="openTab(event, 'vision')">Development Vision</button>
+            <button class="tab-btn" onclick="openTab(event, 'vision')">Development </button>
             <button class="tab-btn" onclick="openTab(event, 'economics')">Economics</button>
+			<button class="tab-btn" onclick="openTab(event, 'resources')">Resources </button>
+			<button class="tab-btn" onclick="openTab(event, 'faq')"> FAQ's </button>
         </div>
 
 		<!-- Subpage Body / Content Section -->
@@ -222,10 +222,68 @@
                             <li><strong>Option B:</strong> A gas development that brings in higher tax revenues and keeps prices low.</li>
                         </ul>
                     </div>
-                </section>
-            </div>
+				</section>
+			</div>
+            
+		 <!-- Tab 5: Resources -->
+				<div id="resources" class="tab-content">
+					<section class="content-section text-content-box">
+						<h3>Project Documentation & Resources</h3>
+						<p class="section-subtitle">Access official reports, regulatory filings, and public consultation materials below.</p>
 
-		</main>
+						<div class="resource-grid">
+							<a href="docs/bennachie.jpg" target="_blank" class="resource-card">
+								<div class="resource-icon">PDF</div>
+								<div class="resource-info">
+									<h4>Resource 1 - Bennachie</h4>
+									<p>Description of what this resource is - A picture of Bennachie</p>
+								</div>
+								<div class="resource-action">View <span>↗</span></div>
+							</a>
+							<a href="docs/cruden-bay.jpg" target="_blank" class="resource-card">
+								<div class="resource-icon">PDF</div>
+								<div class="resource-info">
+									<h4>Resource 2 - Cruden Bay</h4>
+									<p>Description of resource - a picture of Cruden Bay</p>
+								</div>
+								<div class="resource-action">View <span>↗</span></div>
+							</a>
+							<a href="docs/v1.0.zip" target="_blank" class="resource-card">
+								<div class="resource-icon">WEBSITE VERSION</div>
+								<div class="resource-info">
+									<h4>Resource 3 - Zipped version of first website</h4>
+									<p>Zipped backup of first version of website</p>
+								</div>
+								<div class="resource-action">View <span>↗</span></div>
+							</a>
+						</div>
+					</section>
+				</div>
+					
+				<!-- Tab 6: FAQs -->
+				<div id="faq" class="tab-content">
+					<section class="content-section text-content-box">			
+						<h3>Frequently Asked Questions</h3>
+						<p class="lead-text">Have questions about our local gas development plans, environmental impact, or community benefits? Browse our commonly asked questions below. <br><br> <b>Don't see the answer to your question? Please reach out to us at <a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a></b></p>
+						
+						<div class="faq-container">
+							<details class="faq-item">
+								<summary class="faq-question">Question 1?</summary>
+								<div class="faq-answer"><p>Answer 1 goes here.</p></div>
+							</details>
+							<details class="faq-item">
+								<summary class="faq-question">Question 2?</summary>
+								<div class="faq-answer"><p>Answer 2 goes here.</p></div>
+							</details>
+							<details class="faq-item">
+								<summary class="faq-question">Question 3?</summary>
+								<div class="faq-answer"><p>Answer 3 goes here.</p></div>
+							</details>
+						</div>
+					</section>
+				</div>
+
+				</main>
 
 		<!-- Unified Footer / Contact Section -->
 		<footer class="site-footer">
