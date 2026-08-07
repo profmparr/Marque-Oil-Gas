@@ -15,7 +15,7 @@
     --color-black: #000000;
 
     --font-primary: 'Sen', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-heading-special: 'Montserrat', sans-serif;
+	--font-heading-special: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ==========================================================================
@@ -34,7 +34,6 @@ body {
         linear-gradient(to right, rgba(195, 217, 231, 0.12) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(195, 217, 231, 0.12) 1px, transparent 1px);
     background-size: 40px 40px; 
-    
     color: var(--color-body-text);
     font-family: var(--font-primary);
     font-size: 1.1rem; 
@@ -47,10 +46,9 @@ body {
 /* ==========================================================================
    Typography
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
     color: var(--color-foreground);
     font-family: var(--font-heading-special);
-    font-weight: 700;
     margin-top: 0;
     margin-bottom: 0.625rem;
     letter-spacing: 0.5px;
@@ -70,6 +68,7 @@ h2 {
 h3 {
     font-size: clamp(20px, 1.9vw, 22px);
     line-height: 1.36;
+	font-weight: 500;
 }
 
 /* ==========================================================================
@@ -79,6 +78,9 @@ a {
     color: var(--color-foreground);
     text-decoration: underline;
     transition: color 0.2s ease, text-decoration 0.2s ease;
+	letter-spacing: 0.5px;
+    line-height: 1.36;
+	font-weight: 500;
 }
 
 a:hover, 
@@ -99,7 +101,7 @@ input[type="submit"] {
     border-radius: 4px; 
     border: none;
     font-family: inherit;
-    font-size: 1.1rem;
+    font-size: 3rem;
     font-weight: 500;
     padding: 10px 30px;
     text-decoration: none;
@@ -144,6 +146,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     text-align: left;
     letter-spacing: 0.05em;
     line-height: 1.38;
+	font-weight: 400;
 }
 
 .header-text-container {
@@ -294,8 +297,8 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     overflow: hidden;
 }
 
-.text-content-box > h3 {
-    color: var(--color-primary);
+.text-content-box > h2 {
+    color: white;
     font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     background-color: rgba(3, 23, 40, 0.6);
     padding: 20px 30px;
@@ -304,21 +307,8 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     letter-spacing: 2px;
     border: none;
     width: calc(100% + 80px);
-}
-
-.page-subtitle-white {
-    width: calc(100% + 80px);
-    margin-left: -40px;
-    margin-right: -40px;
-    background-color: rgba(3, 23, 40, 0.3);
-    color: var(--color-foreground);
-    font-size: 1.25rem;
-    font-style: italic;
-    text-align: left;
-    padding: 14px 40px;
-    margin-bottom: 30px;
-    border: none;
-    opacity: 0.95;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .lead-text {
@@ -360,11 +350,11 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     flex: 1.2; 
     text-align: justify;
     text-justify: inter-word;
-    border: 2px solid var(--color-secondary);
+    /*border: 2px solid var(--color-secondary);
     border-radius: 8px;
-    padding: 25px 30px;
     background-color: var(--color-background);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);*/
+	padding: 25px 30px;
 }
 
 .side-text p, 
@@ -543,7 +533,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
 }
 
-.text-content-box .simple-choice-box h3 {
+.text-content-box .simple-choice-box h2 {
     color: var(--color-secondary); 
     font-size: 1.3rem;
     margin-bottom: 12px;
@@ -641,7 +631,9 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 .page-heading-box,
 .text-content-box,
 .team-section,
-.site-hero {
+.site-hero,
+.primary-nav,
+.tab-nav {
     animation: fadeInSmooth 0.8s ease-out forwards;
 }
 
