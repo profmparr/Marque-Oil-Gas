@@ -303,12 +303,12 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     background-color: rgba(3, 23, 40, 0.6);
     padding: 20px 30px;
     margin: -35px -40px 20px -40px;
-    text-align: center;
+    text-align: left;
     letter-spacing: 2px;
     border: none;
     width: calc(100% + 80px);
 	font-weight: 700;
-	font-style: italic;
+	font-style: normal;
 }
 
 .lead-text {
