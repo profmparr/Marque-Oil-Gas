@@ -46,9 +46,9 @@ body {
 /* ==========================================================================
    Typography
    ========================================================================== */
-h1, h2, h3, h4, h5, h6, a {
-    color: var(--color-foreground);
+h1, h2, h3, h4, h5, h6{
     font-family: var(--font-heading-special);
+	color: var(--color-foreground);
     margin-top: 0;
     margin-bottom: 0.625rem;
     letter-spacing: 0.5px;
@@ -502,10 +502,6 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     font-weight: 700;
     text-decoration: none;
     font-size: 1.0rem;
-}
-
-.footer-email:hover {
-    color: var(--color-primary);
 }
 
 .footer-bottom {

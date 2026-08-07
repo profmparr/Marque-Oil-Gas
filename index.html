@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Marque Oil & Gas is an independent energy company focused on responsibly developing local gas opportunities and carbon capture integration.">
     <title>Homepage - Marque Oil & Gas</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;&display=swap" rel="stylesheet">
+	<link href="[https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap)" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="media/logo.png">
     <link rel="stylesheet" href="style.css">
@@ -131,56 +132,12 @@
 
     </div>
 
-    <!-- Global Staggered Scroll Animation Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -50px 0px',
-                threshold: 0.1
-            };
+	<!-- Back to Top Button HTML -->
+    <button id="backToTopBtn" title="Scroll to top">
+        <span>Top</span> 
+        <span style="font-size: 1.1rem; line-height: 1;">↑</span>
+    </button>
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('active');
-                        }, index * 100); 
-                        
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.reveal').forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-	
-	<!-- Back to Top Button -->
-	<button id="backToTopBtn" title="Scroll to top">
-		<span>Top</span> 
-		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
-	</button>
-
-	<script>
-		const backToTopBtn = document.getElementById("backToTopBtn");
-
-		window.addEventListener("scroll", () => {
-			if (window.scrollY > 300) {
-				backToTopBtn.classList.add("show");
-			} else {
-				backToTopBtn.classList.remove("show");
-			}
-		});
-
-		backToTopBtn.addEventListener("click", () => {
-			window.scrollTo({
-				top: 0,
-				behavior: "smooth"
-			});
-		});
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>

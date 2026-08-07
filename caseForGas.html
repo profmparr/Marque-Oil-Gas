@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Marque Oil & Gas is an independent energy company focused on responsibly developing local gas opportunities and carbon capture integration.">
     <title>Case For Gas - Marque Oil & Gas</title>
     <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="[https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap)" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="media/logo.png">
     <link rel="stylesheet" href="style.css">
@@ -70,7 +71,7 @@
                     </ol>
                 </div>
                 <div class="side-image">
-                    <img src="media/basicMap.png" alt="Map illustrating the spatial overlap between the proposed wind farm and the gas field">
+                    <img src="media/basicMap.png" alt="Map illustrating the spatial overlap between the proposed wind farm and the gas field" loading="lazy">
                 </div>
             </div>
         </section>
@@ -111,7 +112,7 @@
             </div>
 
             <div class="content-image-wrapper" style="margin-top: 35px;">
-                <img src="media/rigAtSea.png" alt="Illustration of an offshore production installation at sea">
+                <img src="media/rigAtSea.png" alt="Illustration of an offshore production installation at sea" loading="lazy">
             </div>
         </section>
     </div>
@@ -164,7 +165,7 @@
                 </div>
                 
                 <div class="side-image">
-                    <img src="media/bigMap.png" alt="Detailed map showing the proposed pipeline network to Barrow and Connahs Quay">
+                    <img src="media/bigMap.png" alt="Detailed map showing the proposed pipeline network to Barrow and Connahs Quay" loading="lazy">
                 </div>
             </div>
         </section>
@@ -302,59 +303,18 @@
 		</footer>
 
     </div>
-
-    <!-- Tab Switcher Script -->
-    <script>
-        function openTab(evt, tabName) {
-            const contents = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < contents.length; i++) {
-                contents[i].classList.remove("active");
-            }
-
-            const buttons = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("active");
-            }
-
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
 	
-	<!-- Back to Top Button -->
-	<button id="backToTopBtn" title="Scroll to top">
-		<span>Top</span> 
-		<span style="font-size: 1.1rem; line-height: 1;">↑</span>
-	</button>
+	<!-- Back to Top Button HTML -->
+    <button id="backToTopBtn" title="Scroll to top">
+        <span>Top</span> 
+        <span style="font-size: 1.1rem; line-height: 1;">↑</span>
+    </button>
 
-	<script>
-		const backToTopBtn = document.getElementById("backToTopBtn");
-		window.addEventListener("scroll", () => {
-			if (window.scrollY > 300) {
-				backToTopBtn.classList.add("show");
-			} else {
-				backToTopBtn.classList.remove("show");
-			}
-		});
-		backToTopBtn.addEventListener("click", () => {
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		});
-	</script>
-
-	<!-- Fullscreen Image Modal Container -->
-	<div id="imageModal" onclick="this.classList.remove('active')">
-		<img id="modalImg" src="" alt="Enlarged view">
-	</div>
-
-	<script>
-		document.querySelectorAll('.side-image img, .content-image-wrapper img').forEach(img => {
-			img.addEventListener('click', () => {
-				const modal = document.getElementById('imageModal');
-				const modalImg = document.getElementById('modalImg');
-				modalImg.src = img.src;
-				modal.classList.add('active');
-			});
-		});
-	</script>
+    <!-- Fullscreen Image Modal Container HTML -->
+    <div id="imageModal" onclick="this.classList.remove('active')">
+        <img id="modalImg" src="" alt="Enlarged view">
+    </div>
+	
+	<script src="script.js"></script>
 </body>
 </html>
