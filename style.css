@@ -102,11 +102,13 @@ input[type="submit"] {
     border: none;
     font-family: inherit;
     
-    /* Allow the massive text to shrink dynamically on smaller screens */
-    font-size: clamp(1rem, 2vw, 2rem); 
-    
+    /* Font size scaled down by exactly 10% from the original */
+    font-size: clamp(0.9rem, 1.8vw, 1.8rem); 
     font-weight: 500;
-    padding: 10px 30px;
+    
+    /* Padding scaled down by exactly 10% from the original */
+    padding: 9px 27px; 
+    
     text-decoration: none;
     line-height: 1.7;
     cursor: pointer;
@@ -177,29 +179,30 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 
 .nav-list {
     display: grid;
-    /* Forces exactly 4 even columns. minmax(0, 1fr) prevents text from breaking the grid size */
     grid-template-columns: repeat(4, minmax(0, 1fr)); 
     gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 90%; /* Forces the entire row of boxes to be 10% narrower */
 }
 
 .nav-list li {
     width: 100%;
-    display: flex; /* Allows the button inside to stretch vertically */
+    display: flex; 
 }
 
 .nav-btn {
     width: 100%;
-    height: 100%; /* Forces the buttons to match the height of the tallest sibling */
+    height: 100%; 
     background-color: var(--color-secondary); 
     text-align: center;
     line-height: 1.2;
-    padding: 15px 10px;
-    word-break: break-word; /* Ensures extremely long words wrap safely */
     
-    /* Centers the text perfectly in the middle of the box */
+    /* Internal padding scaled down by 10% from the original */
+    padding: 13px 9px; 
+    
+    word-break: break-word; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,6 +261,8 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     background-color: var(--color-background-secondary);
     padding: 35px 40px;
     margin-bottom: 30px;
+    border: 2px solid var(--color-foreground);
+    border-radius: 6px;
 }
 
 .team-roster {
@@ -316,7 +321,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 
 .text-content-box > h2 {
     color: var(--color-primary);
-    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    font-size: clamp(3.6rem, 4.5vw, 3.8rem);
     background-color: rgba(3, 23, 40, 0.6);
     padding: 20px 30px;
     margin: -35px -40px 20px -40px;
@@ -337,6 +342,8 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 .section-subtitle {
     margin-bottom: 15px;
     opacity: 0.9;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .content-image-wrapper {
@@ -467,6 +474,145 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 .status-neutral { color: #3b5266; font-weight: 700; }
 
 /* ==========================================================================
+   Tabbed Switcher Styles (Minimalist Underline Design)
+   ========================================================================== */
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--color-background-secondary); 
+    padding-bottom: 2px;
+}
+
+.tab-btn {
+    flex: 0 1 auto; 
+    text-align: center;
+    background-color: transparent; 
+    color: var(--color-foreground);
+    opacity: 0.9; 
+    border: none;
+    box-shadow: none; 
+    padding: 12px 20px;
+    font-size: 1.05rem;
+    font-weight: 700; 
+    letter-spacing: 0.5px; 
+    border-radius: 0;
+    border-bottom: 3px solid transparent; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: var(--color-primary);
+    opacity: 1;
+    background-color: rgba(102, 252, 241, 0.05); 
+}
+
+.tab-btn.active {
+    background-color: transparent;
+    color: var(--color-primary);
+    opacity: 1;
+    border-bottom: 3px solid var(--color-primary); 
+    font-weight: 700;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Milestone Timeline Tracker Styles
+   ========================================================================== */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    margin-top: 15px;
+    border: 2px solid var(--color-secondary); 
+    padding: 30px; 
+    border-radius: 8px; 
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 40px; 
+    bottom: 40px; 
+    left: 47px; 
+    width: 2px;
+    background-color: var(--color-tertiary);
+    opacity: 0.3;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+}
+
+.timeline-marker {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary); 
+    font-family: var(--font-heading-special);
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-step:hover .timeline-marker {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+}
+
+.timeline-content {
+    background-color: var(--color-background);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 12px 18px;
+    flex-grow: 1;
+    transition: transform 0.3s ease;
+}
+
+.timeline-step:hover .timeline-content {
+    transform: translateY(-2px);
+}
+
+.timeline-content h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-body-text);
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
    Footer Section Styles
    ========================================================================== */
 .site-footer {
@@ -575,54 +721,83 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     margin-bottom: 0;
 }
 
+/* Upgraded Interactive FAQ Styles */
 .faq-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .faq-item {
-    background-color: var(--color-background);
-    border: none;
+    background-color: var(--color-background-secondary); 
+    border: 1px solid rgba(102, 252, 241, 0.15); 
+    border-left: 5px solid var(--color-primary); 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
 }
 
 .faq-item[open] {
     transform: translateY(-2px);
+    border-left: 5px solid var(--color-secondary); 
 }
 
 .faq-question {
-    padding: 16px 20px;
-    font-size: 1.05rem;
+    padding: 18px 25px; 
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-foreground);
     cursor: pointer;
-    list-style: none;
+    list-style: none; 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question:hover {
+    color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.03); 
 }
 
 .faq-question::after {
     content: "+";
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--color-primary);
+    background-color: rgba(102, 252, 241, 0.1); 
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0; 
+    margin-left: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .faq-item[open] .faq-question::after {
     content: "−";
+    transform: rotate(180deg);
+    background-color: var(--color-secondary); 
+    color: var(--color-black);
 }
 
 .faq-answer {
-    padding: 15px 20px;
+    padding: 15px 25px 25px 25px; 
     color: var(--color-body-text);
     line-height: 1.7;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    margin-top: 5px;
 }
 
 .faq-answer p { margin: 0; }
@@ -706,134 +881,6 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-/* ==========================================================================
-   Tabbed Switcher Styles
-   ========================================================================== */
-.tab-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.tab-btn {
-    flex: 1 1 140px; 
-    /* max-width: 250px; */
-    text-align: center;
-    justify-content: center;
-    background-color: var(--color-background-secondary);
-    color: var(--color-foreground);
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 12px 15px; 
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.tab-btn:hover {
-    color: var(--color-primary);
-}
-
-.tab-btn.active {
-    background-color: var(--color-primary);
-    color: var(--color-black);
-}
-
-.tab-content {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.tab-content.active {
-    display: block;
-    opacity: 1;
-}
-
-/* ==========================================================================
-   Milestone Timeline Tracker Styles
-   ========================================================================== */
-.timeline-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: relative;
-    margin-top: 15px;
-}
-
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 17px;
-    width: 2px;
-    background-color: var(--color-tertiary);
-    opacity: 0.3;
-}
-
-.timeline-step {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    position: relative;
-}
-
-.timeline-marker {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    font-family: var(--font-heading-special);
-    font-weight: 700;
-    font-size: 0.9rem;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    z-index: 2;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.timeline-step:hover .timeline-marker {
-    background-color: var(--color-primary);
-    color: var(--color-black);
-}
-
-.timeline-content {
-    background-color: var(--color-background);
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    padding: 12px 18px;
-    flex-grow: 1;
-    transition: transform 0.3s ease;
-}
-
-.timeline-step:hover .timeline-content {
-    transform: translateY(-2px);
-}
-
-.timeline-content h4 {
-    margin: 0 0 4px 0;
-    font-size: 1rem;
-    color: var(--color-primary);
-}
-
-.timeline-content p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--color-body-text);
-    opacity: 0.9;
-    line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -1152,7 +1199,6 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     }
 	
 	.nav-list {
-        /* Prevents text from breaking out of boxes on mobile phones */
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
