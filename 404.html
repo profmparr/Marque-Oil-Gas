@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found - Marque Oil & Gas</title>
+	<meta name="description" content="Page not found - Marque Oil & Gas.">
+    <title>404 Page Not Found - Marque Oil & Gas</title>
+    
+    <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="media/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="page-wrapper">
 		
@@ -29,7 +34,7 @@
 				</h1>
 			</div>
 		</header>
-
+		
 		<!-- Navigation Section -->
         <nav class="primary-nav" aria-label="Main Navigation">
             <ul class="nav-list">
@@ -38,19 +43,24 @@
             </ul>
         </nav>
 
-
-		<!-- 404 Error Content Box -->
-		<main class="page-body-content">
-            <section class="content-section text-content-box" style="text-align: center; padding: 60px 40px;">
-                <h3 style="font-size: clamp(3rem, 6vw, 5rem); color: var(--color-primary); margin-bottom: 10px;">404</h3>
-                <h2 style="margin-bottom: 20px;">Oops! Page Could Not Be Found</h2>
-                <p class="lead-text" style="max-width: 600px; margin: 0 auto 30px auto;">
-                    The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-                </p>
-                <a href="index.html" class="button" style="display: inline-block;">Return to Homepage</a>
+        <!-- 404 Error Content -->
+        <main class="page-body-content" style="display: flex; justify-content: center; align-items: center; min-height: 45vh; margin-bottom: 30px;">
+            <section class="content-section text-content-box reveal" style="text-align: center; max-width: 800px; width: 100%; padding: 60px 40px;">
+                
+                <!-- Inline overrides to make the 404 text huge and orange without breaking your standard h2 styles -->
+                <h2 style="background: transparent; margin: 0; padding: 0; width: 100%; text-align: center; color: var(--color-secondary); font-size: clamp(5rem, 10vw, 8rem); line-height: 1;">404</h2>
+                
+                <h3 style="font-size: 2rem; margin-top: 10px; margin-bottom: 20px; color: var(--color-primary);">Page Not Found</h3>
+                
+                <p class="lead-text" style="margin-bottom: 35px;">It looks like the resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                
+                <a href="index.html" class="button" style="margin-bottom: 25px;">Return to Homepage</a>
+                
+                <p style="margin: 0; opacity: 0.7; font-size: 0.95rem;">You will be redirected automatically in <span id="countdown" style="font-weight: 700; color: var(--color-primary);">10</span> seconds...</p>
+                
             </section>
-		</main>
-		
+        </main>
+
 		<!-- Unified Footer / Contact Section -->
 		<footer class="site-footer">
 			<div class="footer-top">
@@ -70,12 +80,25 @@
 
     </div>
 	
-	<!-- Back to Top Button HTML -->
-    <button id="backToTopBtn" title="Scroll to top">
-        <span>Top</span> 
-        <span style="font-size: 1.1rem; line-height: 1;">↑</span>
-    </button>
-	
+	<!-- Redirect Script -->
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let timeLeft = 10;
+            const countdownElement = document.getElementById("countdown");
+            
+            const redirectTimer = setInterval(function() {
+                timeLeft--;
+                if (countdownElement) {
+                    countdownElement.textContent = timeLeft;
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(redirectTimer);
+                    window.location.href = "index.html";
+                }
+            }, 1000);
+        });
+	</script>
 	<script src="script.js"></script>
 </body>
 </html>

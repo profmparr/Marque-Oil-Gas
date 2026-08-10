@@ -101,14 +101,9 @@ input[type="submit"] {
     border-radius: 4px; 
     border: none;
     font-family: inherit;
-    
-    /* Font size scaled down by exactly 10% from the original */
     font-size: clamp(0.9rem, 1.8vw, 1.8rem); 
     font-weight: 500;
-    
-    /* Padding scaled down by exactly 10% from the original */
     padding: 9px 27px; 
-    
     text-decoration: none;
     line-height: 1.7;
     cursor: pointer;
@@ -184,7 +179,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 90%; /* Forces the entire row of boxes to be 10% narrower */
+    width: 90%; 
 }
 
 .nav-list li {
@@ -198,10 +193,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     background-color: var(--color-secondary); 
     text-align: center;
     line-height: 1.2;
-    
-    /* Internal padding scaled down by 10% from the original */
     padding: 13px 9px; 
-    
     word-break: break-word; 
     display: flex;
     align-items: center;
@@ -403,6 +395,62 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 }
 
 /* ==========================================================================
+   Cleaned-Up Utility Classes (Replaces Inline Styles)
+   ========================================================================== */
+.development-step-heading {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.development-step-text {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.choice-heading {
+    color: var(--color-foreground);
+    margin-bottom: 5px;
+}
+
+.choice-bullet-list {
+    margin-top: 0;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.stacked-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.centered-choice-box {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.choice-box-title {
+    text-transform: none;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.choice-box-text {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--color-foreground);
+    font-weight: 700;
+}
+
+.choice-box-text-last {
+    font-size: 1.15rem;
+    margin: 0;
+    color: var(--color-foreground);
+    font-weight: 700;
+}
+
+/* ==========================================================================
    Comparison Table Styles
    ========================================================================== */
 .table-container {
@@ -520,13 +568,16 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 
 .tab-content {
     display: none;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
 }
 
 .tab-content.active {
     display: block;
-    opacity: 1;
+    animation: fadeInTab 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==========================================================================
