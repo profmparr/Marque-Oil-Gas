@@ -8,11 +8,12 @@
     <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="[https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap)" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="media/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="page-wrapper">
 		
@@ -28,23 +29,26 @@
 					MARQUE<br class="mobile-break"> 
 					OIL<br class="mobile-break"> 
 					&<br class="mobile-break"> 
-					GAS<br class="mobile-break"> 
-					LTD
+					GAS
 				</h1>
 			</div>
 		</header>
-        <!-- Navigation Section -->
+		
+		<!-- Navigation Section -->
         <nav class="primary-nav" aria-label="Main Navigation">
             <ul class="nav-list">
-                <li><a href="index.html" class="button nav-btn">Return to Home</a></li>
+			    <li><a href="index.html" class="button nav-btn">Home</a></li>
+                <li><a href="caseForGas.html" class="button nav-btn">The Isle of Man Gas Opportunity</a></li>
             </ul>
         </nav>
+
 
         <!-- Tab Navigation Switcher Bar -->
         <div class="tab-nav">
             <button class="tab-btn active" onclick="openTab(event, 'opportunity')">The Opportunity</button>
             <button class="tab-btn" onclick="openTab(event, 'case')">The Case</button>
             <button class="tab-btn" onclick="openTab(event, 'vision')">Development </button>
+			<button class="tab-btn" onclick="openTab(event, 'netzero')">Net Zero</button>
             <button class="tab-btn" onclick="openTab(event, 'economics')">Economics</button>
 			<button class="tab-btn" onclick="openTab(event, 'resources')">Resources </button>
 			<button class="tab-btn" onclick="openTab(event, 'faq')"> FAQ's </button>
@@ -171,62 +175,76 @@
         </section>
     </div>
 
-    <!-- Tab 4: Economic Comparison in Brief -->
-    <div id="economics" class="tab-content">
+    <!-- Tab 4: Net Zero -->
+    <div id="netzero" class="tab-content">
         <section class="content-section text-content-box">
-            <h2>The Economic Comparison in Brief</h2>
-            <h3 class="section-subtitle"><em>Key economic tests for Isle of Man residents, Government finances and local impacts</em></h3>
-
-            <div class="table-container">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Economic test</th>
-                            <th class="header-wind">Wind Power and Mooir Vannin</th>
-                            <th class="header-gas">Gas Development</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="test-name">Price protection</td>
-                            <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-no">NO</span> — no protection from gas/electricity price spikes.</td>
-                            <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — lower prices and capped surges for residents.</td>
-                        </tr>
-                        <tr>
-                            <td class="test-name">Project support</td>
-                            <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-no">NO</span> — no UK CfDs/curtailment payments; may need guarantees.</td>
-                            <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — no Government price guarantees required.</td>
-                        </tr>
-                        <tr>
-                            <td class="test-name">Exchequer benefit</td>
-                            <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-unlikely">UNLIKELY</span> — the stated £2bn benefit is not secure.</td>
-                            <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — benefits expected to exceed wind farm upside.</td>
-                        </tr>
-                        <tr>
-                            <td class="test-name">Resident bills</td>
-                            <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-risk">RISK</span> — potential move from 29p/kWh to ~45p/kWh (+50%).</td>
-                            <td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — keeps electricity prices low, free of renewable tariffs.</td>
-                        </tr>
-                        <tr>
-                            <td class="test-name">Wider Local economy</td>
-                            <td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-bad">BAD</span> — visual impact concern; may negatively impact tourism and fishing.</td>
-                            <td class="col-gas" data-label="Gas Development"><span class="status-neutral">NEUTRAL</span> — installations not expected to damage tourism or significantly affect fishing.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        
-            <div class="simple-choice-box">
-                <h2>The Bottom Line: A Simple Choice</h2>
-                <ul class="choice-list">
-                    <li><strong>Option A:</strong> A wind farm that raises bills and brings little benefit, <em>or</em></li>
-                    <li><strong>Option B:</strong> A gas development that brings in higher tax revenues and keeps prices low.</li>
-                </ul>
+            <h2>Net Zero</h2>
+            <h3 class="section-subtitle"><em>Net Zero Subtitle</em></h3>
+            
+            <div class="content-side-by-side">
+                <div class="side-text">
+                    <p class="lead-text"></p>
+                </div>
             </div>
         </section>
     </div>
     
-    <!-- Tab 5: Resources -->
+	<!-- Tab 5: Economic Comparison in Brief -->
+	<div id="economics" class="tab-content">
+		<section class="content-section text-content-box">
+			<h2>The Economic Comparison in Brief</h2>
+			<h3 class="section-subtitle"><em>Key economic tests for Isle of Man residents, Government finances and local impacts</em></h3>
+
+			<div class="table-container">
+				<table class="comparison-table">
+					<thead>
+						<tr>
+							<th>Economic test</th>
+							<th class="header-gas">Gas Development</th>
+							<th class="header-wind">Wind Power and Mooir Vannin</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="test-name">Price protection</td>
+							<td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — lower prices and capped surges for residents.</td>
+							<td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-no">NO</span> — no protection from gas/electricity price spikes.</td>
+						</tr>
+						<tr>
+							<td class="test-name">Project support</td>
+							<td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — no Government price guarantees required.</td>
+							<td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-no">NO</span> — no UK CfDs/curtailment payments; may need guarantees.</td>
+						</tr>
+						<tr>
+							<td class="test-name">Exchequer benefit</td>
+							<td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — benefits expected to exceed wind farm upside.</td>
+							<td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-unlikely">UNLIKELY</span> — the stated £2bn benefit is not secure.</td>
+						</tr>
+						<tr>
+							<td class="test-name">Resident bills</td>
+							<td class="col-gas" data-label="Gas Development"><span class="status-yes">YES</span> — keeps electricity prices low, free of renewable tariffs.</td>
+							<td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-risk">RISK</span> — potential move from 29p/kWh to ~45p/kWh (+50%).</td>
+						</tr>
+						<tr>
+							<td class="test-name">Wider Local economy</td>
+							<td class="col-gas" data-label="Gas Development"><span class="status-neutral">NEUTRAL</span> — installations not expected to damage tourism or significantly affect fishing.</td>
+							<td class="col-wind" data-label="Wind Power and Mooir Vannin"><span class="status-bad">BAD</span> — visual impact concern; may negatively impact tourism and fishing.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+			<div class="simple-choice-box">
+				<h2>The Bottom Line: A Simple Choice</h2>
+				<ul class="choice-list">
+					<li><strong>Option A:</strong> A wind farm that raises bills and brings little benefit, <em>or</em></li>
+					<li><strong>Option B:</strong> A gas development that brings in higher tax revenues and keeps prices low.</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+		
+    <!-- Tab 6: Resources -->
     <div id="resources" class="tab-content">
         <section class="content-section text-content-box">
             <h2>Project Documentation & Resources</h2>
@@ -260,8 +278,8 @@
             </div>
         </section>
     </div>
-        
-    <!-- Tab 6: FAQs -->
+    
+    <!-- Tab 7: FAQs -->
     <div id="faq" class="tab-content">
         <section class="content-section text-content-box">			
             <h2>Frequently Asked Questions</h2>

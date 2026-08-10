@@ -46,7 +46,7 @@ body {
 /* ==========================================================================
    Typography
    ========================================================================== */
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading-special);
 	color: var(--color-foreground);
     margin-top: 0;
@@ -101,7 +101,10 @@ input[type="submit"] {
     border-radius: 4px; 
     border: none;
     font-family: inherit;
-    font-size: 3rem;
+    
+    /* Allow the massive text to shrink dynamically on smaller screens */
+    font-size: clamp(1rem, 2vw, 2rem); 
+    
     font-weight: 500;
     padding: 10px 30px;
     text-decoration: none;
@@ -165,32 +168,46 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     width: auto;      
 }
 
+/* ==========================================================================
+   Navigation Grid (4-Column Layout)
+   ========================================================================== */
 .primary-nav {
     margin-bottom: 30px;
 }
 
 .nav-list {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    /* Forces exactly 4 even columns. minmax(0, 1fr) prevents text from breaking the grid size */
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
     gap: 20px;
-    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .nav-list li {
-    flex: 1 1 200px; 
+    width: 100%;
+    display: flex; /* Allows the button inside to stretch vertically */
 }
 
 .nav-btn {
     width: 100%;
+    height: 100%; /* Forces the buttons to match the height of the tallest sibling */
     background-color: var(--color-secondary); 
     text-align: center;
     line-height: 1.2;
     padding: 15px 10px;
+    word-break: break-word; /* Ensures extremely long words wrap safely */
+    
+    /* Centers the text perfectly in the middle of the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
 .site-hero {
     position: relative;
     display: flex;
@@ -286,7 +303,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 }
 
 /* ==========================================================================
-   Subpage & Side-by-Side Content Styles (Border-free & Centered Layout)
+   Subpage & Side-by-Side Content Styles
    ========================================================================== */
 .page-heading-box,
 .text-content-box {
@@ -298,7 +315,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 }
 
 .text-content-box > h2 {
-    color: white;
+    color: var(--color-primary);
     font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     background-color: rgba(3, 23, 40, 0.6);
     padding: 20px 30px;
@@ -337,7 +354,6 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     border-radius: 4px; 
 }
 
-/* Vertically Centered Layout for Side-by-Side Content */
 .content-side-by-side {
     display: flex;
     align-items: center; 
@@ -345,15 +361,10 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     margin-top: 15px;
 }
 
-/* Side Text with Orange Border, Background, Justified Text, and No Blue Borders */
 .side-text {
     flex: 1.2; 
     text-align: justify;
     text-justify: inter-word;
-    /*border: 2px solid var(--color-secondary);
-    border-radius: 8px;
-    background-color: var(--color-background);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);*/
 	padding: 25px 30px;
 }
 
@@ -385,7 +396,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 }
 
 /* ==========================================================================
-   Comparison Table Styles (Border-free)
+   Comparison Table Styles
    ========================================================================== */
 .table-container {
     width: 100%;
@@ -448,7 +459,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     color: var(--color-body-text);
 }
 
-.status-yes { color: #1a5276; font-weight: 700; }
+.status-yes { color: var(--color-primary); font-weight: 700; }
 .status-no { color: #b52b2b; font-weight: 700; }
 .status-unlikely { color: #b86214; font-weight: 700; }
 .status-risk { color: #b86214; font-weight: 700; }
@@ -709,15 +720,15 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 }
 
 .tab-btn {
-    flex: 1 1 200px; 
-    max-width: 250px;
+    flex: 1 1 140px; 
+    /* max-width: 250px; */
     text-align: center;
     justify-content: center;
     background-color: var(--color-background-secondary);
     color: var(--color-foreground);
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 12px 25px;
+    padding: 12px 15px; 
     font-size: 1rem;
     font-weight: 700;
     border-radius: 4px;
@@ -1138,6 +1149,11 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     .header-title {
         line-height: 1.1; 
 		text-align: center;
+    }
+	
+	.nav-list {
+        /* Prevents text from breaking out of boxes on mobile phones */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
