@@ -79,5 +79,11 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+	
+	// 4. Dynamic Footer Year
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) { // Safety check: only run if the span exists on the page
+        yearSpan.textContent = new Date().getFullYear();
+    }
 
 });
