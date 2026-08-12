@@ -534,6 +534,10 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
     padding-bottom: 2px;
 }
 
+.tab-nav-left {
+    justify-content: flex-start;
+}
+
 .tab-btn {
     flex: 0 1 auto; 
     text-align: center;
@@ -723,6 +727,33 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 .footer-bottom p {
     margin: 5px 0;
     opacity: 0.8;
+}
+
+/* ==========================================================================
+   Footer Developer Credit Link & Icon
+   ========================================================================== */
+.footer-credit-link {
+    color: var(--color-primary); 
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Spacing between the icon and your name */
+    transition: color 0.2s ease;
+}
+
+.footer-credit-link:hover {
+    color: var(--color-secondary); 
+    text-decoration: underline;
+}
+
+.github-icon {
+    transition: transform 0.2s ease;
+}
+
+/* Makes the little cat logo pop up slightly when you hover over the link */
+.footer-credit-link:hover .github-icon {
+    transform: scale(1.15); 
 }
 
 /* ==========================================================================

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Marque Oil & Gas is an independent energy company focused on responsibly developing local gas opportunities and carbon capture integration.">
-    <title>Homepage - Marque Oil & Gas</title>
+    <!-- Updated Title -->
+    <title>Previous Licences - Marque Oil & Gas</title>
+    <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap" rel="stylesheet">
@@ -12,9 +14,11 @@
     <link rel="icon" type="image/png" href="media/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="page-wrapper">
-		<!-- Header Section with Clickable Logo on Left -->
+		
+        <!-- Header Section -->
 		<header class="site-header">
 			<div class="header-logo">
 				<a href="index.html" title="Return to Homepage">
@@ -30,7 +34,7 @@
 				</h1>
 			</div>
 		</header>
-
+		
 		<!-- Navigation Section -->
         <nav class="primary-nav" aria-label="Main Navigation">
             <ul class="nav-list">
@@ -40,59 +44,38 @@
             </ul>
         </nav>
 
-		<!-- Hero / Vision Statement Section -->
-		<section class="site-hero reveal">
-			<img src="media/sea.jpg" alt="Coastal landscape with offshore energy infrastructure" class="hero-image">
-			
-			<div class="hero-vision-box">
-				<h3>The Company</h3>
-				<p>We are an independent energy company focused on identifying and responsibly developing overlooked oil and gas opportunities in mature basins. <br>
-				We combine technical expertise, commercial discipline and practical infrastructure solutions to progress resources that might otherwise remain undeveloped.</p>
-			</div>
-			
-			<div class="hero-vision-box">
-				<h3>Our Purpose</h3>
-				<p>Our purpose is to maximise the economic value of local gas through efficient development, rigorous environmental stewardship and responsible resource management.<br> Our current project has the potential to create substantial and lasting value for government, the economy and the wider community during the transition to a lower-carbon energy system.</p>
-			</div>
-		</section>
+		<!-- Tab Navigation Switcher Bar -->
+        <!-- Added the new tab-nav-left class here -->
+		<div class="tab-nav tab-nav-left">
+			<button class="tab-btn active" onclick="openTab(event, 'p2409')">P2409</button>
+		</div>
+		
+<!-- Subpage Body / Content Section -->
+<main class="page-body-content">
+    
+    <!-- Tab 1: P2409 -->
+    <!-- Fixed the ID to match the button's onclick target -->
+    <div id="p2409" class="tab-content active">
+        <section class="content-section text-content-box">
+            <h2>Previous Licences</h2>
+            <h3 class="section-subtitle"><em>Marque Oil & Gas successfully applied for a Promote Licence in the UK 30th Round.</em></h3>
+            
+            <!-- Two-Column Wrapper -->
+            <div class="content-side-by-side">
+                <div class="side-text">
+                    <p class="lead-text">The P2409 licence area included two low-risk West of Shetland discoveries in part-blocks 206-5a and 206-10a on the Rona Ridge in approximately 140m water, close to the giant Clair field.</p>
+                 
+                    <p class="lead-text">The Freya discovery (1980) has a thick ~350m oil column in Clair Group Devonian sandstones. <br> Fulla, discovered in 2012 is a Cretaceous reservoir.<br> The license was relinquished in 2021.</p>
 
-		<!-- Leadership Team Section -->
-		<section class="content-section team-section reveal">
-			
-			<!-- Top Row: Names and Titles -->
-			<div class="team-roster">
-				<div class="team-member">
-					<h3>Mark Ibram <br><span class="member-title">(Director)</span></h3>
-				</div>
-				<div class="team-member">
-					<h3>Dr Ronnie Parr <br><span class="member-title">(Subsurface Manager)</span></h3>
-				</div>
-				<div class="team-member">
-					<h3>James Keggin <br><span class="member-title">(Country Manager)</span></h3>
-				</div>
-			</div>
-			
-			<!-- Visual Divider -->
-			<hr class="team-divider">
-			
-			<!-- Bottom Row: Bullet Points -->
-			<div class="team-experience">
-				<ul>
-					<li>With a combined total of over 120 years experience in the oil and gas industry as Geophysicists.</li>
-					<li>Global and UK experience with:
-						<ul>
-							<li>consultancies, leading contractors and multi-national oil companies.</li>
-							<li>over 80 combined years with BP.</li>
-							<li>the UK Oil & Gas regulator (NSTA, formerly the OGA).</li>
-						</ul>
-					</li>
-					<li>Team Leaders and Technical Experts, with major discoveries (e.g. Schiehallion WoS)</li>
-					<li>Based in Aberdeen and the Isle of Man.</li>
-				</ul>
-			</div>
-			
-		</section>
+                </div>
+                <div class="side-image">
+                    <img src="media/p2409.png" alt="Map illustrating the placement of p2409 licence area" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </div>
 
+</main>
 		<!-- Unified Footer / Contact Section -->
 		<footer class="site-footer">
 			<div class="footer-top">
@@ -117,12 +100,19 @@
 		</p>
     </div>
 
+    </div>
+	
 	<!-- Back to Top Button HTML -->
     <button id="backToTopBtn" title="Scroll to top">
         <span>Top</span> 
         <span style="font-size: 1.1rem; line-height: 1;">↑</span>
     </button>
 
+    <!-- Fullscreen Image Modal Container HTML -->
+    <div id="imageModal" onclick="this.classList.remove('active')">
+        <img id="modalImg" src="" alt="Enlarged view">
+    </div>
+	
 	<script src="script.js"></script>
 </body>
 </html>
