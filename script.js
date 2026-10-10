@@ -86,4 +86,15 @@ document.addEventListener("DOMContentLoaded", function() {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+	// 5. Image Comparison Slider Logic
+		const slider = document.getElementById('compareSlider');
+		const sliderContainer = document.querySelector('.image-slider-container');
+		
+		if (slider && sliderContainer) {
+			slider.addEventListener('input', (e) => {
+				// Updates the CSS variable in real-time as the user drags
+				sliderContainer.style.setProperty('--position', `${e.target.value}%`);
+			});
+		}
+
 });

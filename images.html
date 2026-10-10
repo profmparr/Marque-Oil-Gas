@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Marque Oil & Gas is an independent energy company focused on responsibly developing local gas opportunities and carbon capture integration.">
+    <title>Homepage - Marque Oil & Gas</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- Header Section with Clickable Logo on Left -->
+		<header class="site-header">
+			<div class="header-logo">
+				<a href="index.html" title="Return to Homepage">
+					<img src="logo.png" alt="Website Logo">
+				</a>
+			</div>
+			<div class="header-text-container">
+				<h1 class="header-title">
+					MARQUE<br class="mobile-break"> 
+					OIL<br class="mobile-break"> 
+					&<br class="mobile-break"> 
+					GAS
+				</h1>
+			</div>
+		</header>
+
+		<!-- Navigation Section -->
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+			    <li><a href="index.html" class="button nav-btn">Home</a></li>
+                <li><a href="caseForGas.html" class="button nav-btn">The Isle of Man Gas Opportunity</a></li>
+				<li><a href="previousLicences.html" class="button nav-btn">Previous Licences</a></li>
+				<li><a href="images.html" class="button nav-btn">Images</a></li>
+            </ul>
+        </nav>
+		
+		<!-- Subpage Body / Content Section -->
+		<main class="page-body-content">
+			<section class="content-section text-content-box">
+				
+				<h2>Visualisations</h2>
+				<p class="lead-text">Pictures were taken using a camera with a 51mm focal length lens with the centre of the image looking 110 degrees from North from an elevation of approximately 100m above m.s.l. The viewing angle is approximately +/-20 degrees.</p>
+				
+				<!-- Subtle divider line -->
+				<hr class="team-divider">
+
+		<!-- Interactive Before/After Slider -->
+				<h3 style="margin-top: 30px; text-align: center; color: var(--color-primary);">Site Horizon: Before vs. After</h3>
+				
+				<div class="image-slider-container">
+					<!-- 1. Base Image (After) -->
+					<img src="Photo7_Turbines_ReferenceImage_40deg_100m_ClearerAir_5472x3080.png" alt="Visualisation after turbine development" class="slider-base-img" loading="lazy">
+					
+					<!-- 2. Overlay Image (Before) -->
+					<img src="Photo7_NUI_MATCHED_40deg_100m_ClearerAir_5472x3080.jpg" alt="Visualisation before development" class="slider-overlay-img" loading="lazy">
+					
+					<!-- 3. The Invisible Slider Control -->
+					<input type="range" min="0" max="100" value="50" class="slider-range" id="compareSlider" aria-label="Image comparison slider">
+					
+					<!-- 4. The Visual Divider Line and Button -->
+					<div class="slider-handle">
+						<div class="slider-handle-button">&harr;</div>
+					</div>
+				</div>
+				<p style="text-align: center; font-style: italic; margin-top: 15px; opacity: 0.9;">Drag the slider left and right to compare the horizon.</p>
+				
+				<hr class="team-divider" style="margin-top: 40px;">
+
+				<!-- IMG 3: Ad Read -->
+				<div class="content-image-wrapper">
+					<img src="MARQUE_Ad_2026_1_3840_1776.jpg" alt="Marque Oil and Gas Advertisement" loading="lazy">
+				</div>
+
+			</section>
+		</main>
+		
+		<!-- Unified Footer / Contact Section -->
+		<footer class="site-footer">
+			<div class="footer-top">
+				<div class="footer-logo">
+					<img src="logo.png" alt="Website Logo">
+				</div>
+				<div class="footer-contact-block">
+					<p class="footer-contact-text">Contact : <a href="mailto:enquiries@marqueoil.co.uk" class="footer-email">enquiries@marqueoil.co.uk</a></p>
+				</div>
+			</div>
+			
+	<div class="footer-bottom">
+		<p>Registered Office: 167 Great Portland Street, 5th Floor, London W1W 5PF</p>
+		<p>&copy; <span id="current-year">2026</span> Marque Oil & Gas. Website built by  
+			<a href="https://github.com/profmparr" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
+				<!-- The Inline GitHub SVG Icon -->
+				<svg class="github-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+					<path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+				</svg>
+				 MParr
+			</a>
+		</p>
+    </div>
+
+	<!-- Back to Top Button HTML -->
+    <button id="backToTopBtn" title="Scroll to top">
+        <span>Top</span> 
+        <span style="font-size: 1.1rem; line-height: 1;">↑</span>
+    </button>
+
+
+	<!-- Fullscreen Image Modal Container HTML -->
+		<div id="imageModal" onclick="this.classList.remove('active')">
+			<img id="modalImg" src="" alt="Enlarged view">
+		</div>
+		
+	<script src="script.js"></script>
+</body>
+</html>
